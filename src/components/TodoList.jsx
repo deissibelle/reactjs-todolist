@@ -1,20 +1,9 @@
-
-
-
-export default function TodoList(){
-          let todos = [
-            'go to the gym',
-            'eat more fruits and vegetables',
-            'Pick up the kids from school'
-          ]
-    return(
-        <ul className="main">
-            {todos.map((todo,todoIndex) => {
-                return(
-                    <li className="todoItem" key={todoIndex}>{todo}</li>
-                )
-            })}
-        </ul>
-        
-    )
+import  TodoItem from "./TodoItem";
+import styles from "./todolist.module.css"
+export default function TodoList({todos,setTodos}){
+  return <div className={styles.list}>
+         {todos.map((item)=>(
+      <TodoItem   key={item} item={item} todos={todos} setTodos={setTodos}/>
+      ))}
+    </div>
 }

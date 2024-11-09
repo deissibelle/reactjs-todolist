@@ -1,16 +1,15 @@
-
-import TodoInput from './components/TodoInput'
-import TodoList from './components/TodoList'
+import Header from "./components/Header";
+import  Todo  from "./components/Todo";
+import "./App.css";
 
 function App() {
- 
-
   return (
-    <>
-      <TodoInput/>
-      <TodoList/>
-     </>
-  )
+    <div className="App">
+      <Header/>
+      <Todo />
+    
+    </div>
+  );
 }
 
-export default App
+export default App;
